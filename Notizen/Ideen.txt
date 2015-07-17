@@ -3,10 +3,11 @@ Ideen Arcade
 	* Start screen mit Münzen einwerfen, so wie bei den Automaten in spielehallen.
 	* Flugzeug game
 
-		* Man hat ein Flugzeug und kann es inerhalb des Bildschirmes fliegen
+		* Man hat ein Flugzeug und kann es innerhalb des Bildschirmes fliegen
 
 			* Man zielt mit der Maus und in die Richtung fliegt man
 			* Das level geht nur am oberen Rand weiter (?)
+				*Oder es ist fixiert und die Gegner kommen auf einen zu.
 
 		* Gegner kommen (fast immer) von oben.
 
@@ -19,7 +20,7 @@ Ideen Arcade
 
 		* Es gibt verschiedene Game Modi
 
-			* In jedem Modi darf man sich die Zeit in dr das Spielt aussuchen
+			* In jedem Modi darf man sich die Zeit in der das Spielt aussuchen
 
 				* Periodisch von 1985,2020 und von 2222
 
