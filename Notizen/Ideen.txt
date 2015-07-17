@@ -1,0 +1,39 @@
+Ideen Arcade
+
+	* Start screen mit Münzen einwerfen, so wie bei den Automaten in spielehallen.
+	* Flugzeug game
+
+		* Man hat ein Flugzeug und kann es inerhalb des Bildschirmes fliegen
+
+			* Man zielt mit der Maus und in die Richtung fliegt man
+			* Das level geht nur am oberen Rand weiter (?)
+
+		* Gegner kommen (fast immer) von oben.
+
+			* Wenn sie am Spieler vorbeigeflogen sind kommen sie von einer anderen Richtung wieder
+
+		* Man hat Upgrades
+
+			* Sie verändern das Aussehen
+			* Es gibt verschiedene Typen wie z.b. neue Motoren oder Flügel
+
+		* Es gibt verschiedene Game Modi
+
+			* In jedem Modi darf man sich die Zeit in dr das Spielt aussuchen
+
+				* Periodisch von 1985,2020 und von 2222
+
+			* Survival
+
+				* Man muss wellen von Gegnern überleben
+
+			* Story
+
+				* Man fliegt durch die Zeit und das Aussehen des Flugzeugs ändert sich dementsprechend wenn man es Upgradet
+				* Am ende jeder Zeitebene muss der Spieler einen Boss töten der ein Portal öffnet
+
+
+		* 
+
+
+

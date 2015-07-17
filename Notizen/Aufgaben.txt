@@ -1,0 +1,23 @@
+Aufgabenteilung
+
+Ana:
+
+	* Player
+
+		* Bewegen in Richtung Mauszeiger
+
+
+
+CCool6
+
+	* Levelgeneration
+
+		* Bäume erstellen
+		* Boden erstellen
+
+			* Grass
+
+		* 
+
+
+
