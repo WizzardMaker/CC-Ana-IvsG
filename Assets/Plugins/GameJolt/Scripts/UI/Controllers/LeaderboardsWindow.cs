@@ -21,6 +21,7 @@ namespace GameJolt.UI.Controllers
 		{
 			animator.SetTrigger("Leaderboards");
 			animator.SetTrigger("ShowLoadingIndicator");
+			this.callback = callback;
 
 			GameJolt.API.Scores.GetTables((GameJolt.API.Objects.Table[] tables) => {
 				if (tables != null)

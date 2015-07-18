@@ -14,7 +14,6 @@ public class player : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
@@ -34,9 +33,9 @@ public class player : MonoBehaviour {
 		trueFalse = angle2 < 0 && angle2 > -180;
 
 		if(angle2 < 0 && angle2 > -180){
-			transform.Rotate (new Vector3(0,0, speed));
+			transform.Rotate (new Vector3(0,0, angle2 + speed > 0 ? 0 : speed));
 		}else{
-			transform.Rotate (new Vector3(0,0,speed * -1)); //, transform.eulerAngles.z - speed < angle && transform.eulerAngles.z - speed > angle + 180 ? 0 : -1 * speed));
+			transform.Rotate (new Vector3(0,0,angle2 + speed < 0 ? 0 : speed * -1)); //, transform.eulerAngles.z - speed < angle && transform.eulerAngles.z - speed > angle + 180 ? 0 : -1 * speed));
 		}
 		//transform.eulerAngles = (new Vector3(0, 0, angle - 90));
 

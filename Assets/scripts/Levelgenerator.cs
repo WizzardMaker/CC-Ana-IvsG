@@ -25,6 +25,7 @@ public class Levelgenerator : MonoBehaviour {
 		y_offset = 10.8f;
 
 		ground = new Playerfield(Instantiate(groundPrefab));
+		ground.z = 1;
 		ground.UpdateGraphics();
 
 		generateTrees(amt_trees);
@@ -54,6 +55,7 @@ public class Levelgenerator : MonoBehaviour {
 			r.TreeGFX.transform.SetParent(ground.PlayerfieldGFX.transform);
 			r.x = Random.Range((int)min_size_x,(int)max_size_x);
 			r.y = Random.Range((int)min_size_y,(int)max_size_y);
+			r.z = 1.7f;
 			r.rotation = Random.Range(-180,180);
 			r.UpdateGraphics();
 		}
