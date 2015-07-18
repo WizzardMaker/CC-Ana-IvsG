@@ -9,6 +9,7 @@ public class player : MonoBehaviour {
 	public Vector3 objectpos;
 	public float angle;
 	public float angle2;
+	public float velocity;
 	public bool trueFalse;
 
 	// Use this for initialization
@@ -41,7 +42,7 @@ public class player : MonoBehaviour {
 
 		//transform.rotation = Quaternion.Euler( new Vector3(0, 0, angle - 90) );
 
-		rig.velocity = transform.up * 0.1f;
+		rig.velocity = transform.up * velocity;
 		// = mousepos;
 	}
 
