@@ -21,6 +21,8 @@ public class enemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+
+
 		Rigidbody2D rig = GetComponent<Rigidbody2D>();
 		
 		playerpos = player.transform.position;
@@ -35,15 +37,16 @@ public class enemy : MonoBehaviour {
 		
 		trueFalse = angle2 < 0 && angle2 > -180;
 
-		if(distance < minDistance){
-			state = "straight";
-			if(!(FixAngle(transform.eulerAngles.z + 90) > angle) && !(FixAngle(transform.eulerAngles.z - 90) < angle)){
+		if(state != "evade"){
+			if(distance < minDistance){
+				state = "straight";
+				if(!(FixAngle(transform.eulerAngles.z + 90) > angle) && !(FixAngle(transform.eulerAngles.z - 90) < angle)){
+					state = "rotate";
+				}
+			}else{
 				state = "rotate";
 			}
-		}else{
-			state = "rotate";
 		}
-
 		switch(state){
 			case("rotate"):
 				if(angle2 < 0 && angle2 > -180){
@@ -55,7 +58,16 @@ public class enemy : MonoBehaviour {
 			case("straight"):
 
 			break;
+			case("evade"):
+				angle2 = Mathf.DeltaAngle(transform.eulerAngles.z,angle) + Random.Range(-90,90);
 
+				if(angle2 < 0 && angle2 > -180){
+					transform.Rotate (new Vector3(0,0, -1 * angle2 + speed > 179 ? 0 : speed));
+				}else{
+					transform.Rotate (new Vector3(0,0, -1 * angle2 + speed < -179 ? 0 : speed * -1)); //, transform.eulerAngles.z - speed < angle && transform.eulerAngles.z - speed > angle + 180 ? 0 : -1 * speed));
+				}
+
+			break;
 		}
 		//transform.eulerAngles = (new Vector3(0, 0, angle - 90));
 		
@@ -86,4 +98,12 @@ public class enemy : MonoBehaviour {
 		}
 		return false;
 	}
+	void OnTriggerStay2D(Collider2D other) {
+
+		state = "evade";
+	}
+	void OnTriggerExit2D(Collider2D other) {
+		state = "rotate";
+	}
+	
 }
